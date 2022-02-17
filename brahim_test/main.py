@@ -34,8 +34,8 @@ def feature_engineering(raw_df):
     return df
 
 def fit_model(train_X, train_y, random_state=42):
-clf=RandomForestClassifier(n_estimators=100)
-
+    
+    clf=RandomForestClassifier(n_estimators=100)
     #clf = DecisionTreeClassifier()
     #clf = LogisticRegression(max_iter=1000) 
     clf.fit(train_X,train_y) 
