@@ -2,6 +2,7 @@ import dagshub
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.linear_model import SGDClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LogisticRegression 
 from sklearn.tree import DecisionTreeClassifier
@@ -33,9 +34,10 @@ def feature_engineering(raw_df):
     return df
 
 def fit_model(train_X, train_y, random_state=42):
+clf=RandomForestClassifier(n_estimators=100)
 
     #clf = DecisionTreeClassifier()
-    clf = LogisticRegression(max_iter=1000) 
+    #clf = LogisticRegression(max_iter=1000) 
     clf.fit(train_X,train_y) 
 
     
