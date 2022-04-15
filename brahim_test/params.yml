@@ -1,4 +1,0 @@
-model:
-  priors: null
-  var_smoothing: 1.0e-09
-model_class: GaussianNB
